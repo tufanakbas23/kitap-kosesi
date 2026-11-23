@@ -1,0 +1,76 @@
+/* ==========================================================================
+   account.css — Giriş/Kayıt sayfaları ve "Hesabım" alanı
+   ========================================================================== */
+
+/* ---------- Giriş / Kayıt ---------- */
+.auth-wrap { display: grid; grid-template-columns: 1fr 1fr; max-width: 900px; margin: 10px auto; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.auth-form { padding: 34px 36px; }
+.auth-form h1 { font-size: 22px; }
+.auth-side { background: linear-gradient(160deg, var(--primary), #b9420a); color: #fff; padding: 34px 36px; display: flex; flex-direction: column; justify-content: center; }
+.auth-side h2 { color: #fff; font-size: 22px; }
+.auth-side li { margin-bottom: 10px; display: flex; gap: 10px; }
+.auth-tabs { display: flex; margin-bottom: 22px; border-bottom: 1px solid var(--border); }
+.auth-tabs a { flex: 1; text-align: center; padding: 10px; font-weight: 600; color: var(--muted); border-bottom: 2px solid transparent; }
+.auth-tabs a.active { color: var(--primary); border-bottom-color: var(--primary); }
+.demo-accounts { margin-top: 18px; padding: 12px; background: var(--bg); border-radius: var(--radius); font-size: 12px; }
+.password-field { position: relative; }
+.password-field .toggle-pass { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: 0; cursor: pointer; color: var(--muted); font-size: 12px; }
+
+/* ---------- Hesabım düzeni ---------- */
+.account-layout { display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: start; }
+.account-sidebar { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.account-user { padding: 18px; background: var(--primary-light); border-bottom: 1px solid var(--border); }
+.account-user .avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+.account-user strong { display: block; }
+.account-user span { font-size: 12px; color: var(--muted); }
+.account-menu a, .account-menu button { display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-left: 3px solid transparent; width: 100%; background: none; border-top: 0; border-right: 0; border-bottom: 1px solid #f2f2f2; font: inherit; cursor: pointer; text-align: left; color: var(--text); }
+.account-menu a:hover, .account-menu button:hover { background: #fafafa; }
+.account-menu a.active { border-left-color: var(--primary); color: var(--primary); font-weight: 600; background: #fffaf6; }
+
+/* Özet kutuları */
+.stat-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
+.stat-box { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; display: flex; gap: 12px; align-items: center; }
+.stat-box .ico { font-size: 26px; }
+.stat-box strong { font-size: 20px; display: block; line-height: 1.1; }
+.stat-box span { font-size: 12px; color: var(--muted); }
+
+/* ---------- Sipariş kartları ---------- */
+.order-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 14px; }
+.order-card-head { display: grid; grid-template-columns: repeat(4, 1fr) auto; gap: 14px; padding: 12px 18px; background: #fafafa; border-bottom: 1px solid var(--border); font-size: 12px; align-items: center; }
+.order-card-head span { color: var(--muted); display: block; }
+.order-card-head strong { font-size: 13px; }
+.order-card-body { padding: 14px 18px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.order-card-body .cover { width: 48px; }
+
+.status-filter { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+.status-filter a { padding: 7px 14px; border: 1px solid var(--border); border-radius: 20px; background: #fff; font-size: 13px; }
+.status-filter a.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* Sipariş takip çizelgesi */
+.tracker { display: flex; justify-content: space-between; position: relative; margin: 10px 0 24px; }
+.tracker::before { content: ""; position: absolute; top: 15px; left: 8%; right: 8%; height: 3px; background: var(--border); }
+.tracker-step { position: relative; text-align: center; flex: 1; font-size: 12px; color: var(--muted); }
+.tracker-step .dot { width: 32px; height: 32px; border-radius: 50%; background: #fff; border: 3px solid var(--border); margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; position: relative; z-index: 1; }
+.tracker-step.done { color: var(--success); font-weight: 600; }
+.tracker-step.done .dot { background: var(--success); border-color: var(--success); color: #fff; }
+
+.order-item-row { display: grid; grid-template-columns: 56px 1fr auto auto auto; gap: 14px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.order-item-row:last-child { border-bottom: 0; }
+
+/* ---------- Adres kartları ---------- */
+.address-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.address-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.address-card.default { border-color: var(--primary); }
+.address-card .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.address-card .foot { display: flex; gap: 12px; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border); }
+
+.book-mini { display: flex; gap: 12px; align-items: center; }
+.book-mini .cover { width: 50px; flex-shrink: 0; }
+
+@media (max-width: 768px) {
+    .auth-wrap, .account-layout { grid-template-columns: 1fr; }
+    .auth-side { display: none; }
+    .stat-boxes { grid-template-columns: repeat(2, 1fr); }
+    .order-card-head { grid-template-columns: 1fr 1fr; }
+    .order-item-row { grid-template-columns: 50px 1fr; }
+}
